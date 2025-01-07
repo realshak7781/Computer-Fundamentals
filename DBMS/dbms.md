@@ -39,6 +39,37 @@ A DBMS simplifies and automates complex data management tasks, making it critica
 
 ---
 
+# File Management System vs Database Management System
+
+## Question:
+What is the difference between a File Management System (FMS) and a Database Management System (DBMS)?
+
+## Answer:
+
+### 1. Definition:
+- **FMS**: Organizes and manages data in flat files.
+- **DBMS**: Manages structured databases with advanced data handling capabilities.
+
+### 2. Key Differences:
+
+| Feature                | File Management System (FMS)             | Database Management System (DBMS)         |
+|------------------------|------------------------------------------|-------------------------------------------|
+| **Data Structure**     | Flat files                              | Structured (tables, rows, columns)        |
+| **Redundancy**         | High                                    | Minimized using normalization             |
+| **Data Integrity**     | Minimal checks                          | Enforced via constraints and rules        |
+| **Concurrency**        | Limited support                         | Advanced mechanisms for multiple users    |
+| **Backup and Recovery**| Manual                                  | Automated tools and mechanisms            |
+| **Querying**           | Custom code required                    | SQL and other query languages supported   |
+| **Scalability**        | Limited                                 | Scalable for large datasets and applications |
+| **Cost**               | Low                                     | High (software and expertise required)    |
+
+---
+
+### Key Takeaway:
+FMS is ideal for small, standalone systems, while DBMS is essential for complex, scalable, and secure applications.
+
+---
+
 ## References:
 - **"Database System Concepts" by Silberschatz et al.**
 - **"Fundamentals of Database Systems" by Elmasri & Navathe**
