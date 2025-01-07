@@ -70,6 +70,64 @@ FMS is ideal for small, standalone systems, while DBMS is essential for complex,
 
 ---
 
+# Three-Schema Architecture in DBMS
+
+## Question:
+What is the Three-Schema Architecture in DBMS? Explain the three levels of abstraction.
+
+## Answer:
+
+### 1. Internal Level (Physical Schema)
+- **Definition**: Defines the physical storage structure of the database.
+- **Purpose**: Optimizes storage and access methods for efficient data retrieval.
+- **Key Elements**:
+  - File structures
+  - Indexing and hashing
+  - Data compression techniques
+
+---
+
+### 2. Conceptual Level (Logical Schema)
+- **Definition**: Represents the logical structure of the database.
+- **Purpose**: Focuses on data organization and relationships, independent of physical storage.
+- **Key Elements**:
+  - Entities and relationships
+  - Attributes and constraints
+  - Normalized tables
+
+---
+
+### 3. External Level (User Views)
+- **Definition**: Provides a personalized view of the database tailored to the user’s needs.
+- **Purpose**: Simplifies data interaction by hiding unnecessary details.
+- **Key Elements**:
+  - Views or subsets of the database
+  - User-specific data formats
+
+---
+
+### **Diagram**:
+![Three-Schema Architecture Diagram](./three-schema.png)
+
+---
+
+## Advantages:
+1. **Data Independence**:
+   - Logical data independence ensures changes in the conceptual schema do not affect external schemas.
+   - Physical data independence ensures changes in storage do not affect the conceptual schema.
+2. **Simplified Maintenance**:
+   - Clear separation of concerns allows for easier modifications.
+3. **User-Specific Views**:
+   - Ensures data security and tailored usability.
+
+## Key Takeaway:
+The Three-Schema Architecture separates user interaction from database implementation, ensuring data independence and efficient management.
+
+---
+
+
+
+
 ## References:
 - **"Database System Concepts" by Silberschatz et al.**
 - **"Fundamentals of Database Systems" by Elmasri & Navathe**
