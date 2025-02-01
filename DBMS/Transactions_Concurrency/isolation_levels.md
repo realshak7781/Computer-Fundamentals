@@ -27,3 +27,36 @@ In database management systems (DBMS), **isolation levels** determine how transa
 - **Phantom Read** 👻: Arises when a transaction re-executes a query returning a set of rows that satisfy a condition and finds that the set of rows satisfying the condition has changed due to another recently committed transaction.
 
 Understanding these isolation levels and phenomena is crucial for designing robust and efficient database applications that maintain data integrity while optimizing performance. 
+
+
+**Non-Repeatable Read** and **Phantom Read** are different. Here's a simple way to understand them:  
+
+---
+
+### **📌 Non-Repeatable Read (Data Modification Issue)**
+- Happens when a transaction **reads the same row twice** and sees **different values** because another transaction updated the row.  
+- **Example**:  
+  - **T1:** Reads `salary = 5000` from an employee table.  
+  - **T2:** Updates `salary = 6000` and commits.  
+  - **T1:** Reads again and sees `salary = 6000`. (Value changed!)  
+
+👉 **Issue**: The same row gives different values in the same transaction.  
+
+---
+
+### **📌 Phantom Read (Data Addition/Deletion Issue)**
+- Happens when a transaction **runs the same query twice** but gets **a different number of rows** because another transaction inserted or deleted rows.  
+- **Example**:  
+  - **T1:** Runs `SELECT * FROM employees WHERE department = 'IT'` → 5 employees.  
+  - **T2:** Inserts a new employee into 'IT' and commits.  
+  - **T1:** Runs the same query again → Now gets 6 employees. (Extra row appears!)  
+
+👉 **Issue**: The **number of rows** in the result set changes, not the values of existing rows.  
+
+---
+
+### **⚡ Key Difference**
+- **Non-Repeatable Read** → A specific **row's value** changes.  
+- **Phantom Read** → The **number of rows** in the result set changes.  
+
+Let me know if you need a real SQL example! 🚀
