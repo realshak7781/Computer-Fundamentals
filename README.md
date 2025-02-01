@@ -3,7 +3,6 @@ A collection of tutorials on computer fundamentals
 
 ## Table of Contents
 
-- [DBMS](database/)
-- [Operating Systems](os/)
-- [Computer Networks](networks/)
-- [Object Oriented Programming](oop/)
+- [DBMS](DBMS/)
+- [Computer Networks](Computer Networks/)
+- [Object Oriented Programming](OOPS/)
