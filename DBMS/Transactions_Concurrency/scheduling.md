@@ -1,4 +1,4 @@
-The webpage on **DBMS Scheduling** from TakeUForward.org provides a comprehensive overview of scheduling in Database Management Systems (DBMS). Here's a concise summary:
+
 
 # DBMS Scheduling Overview 📅
 
